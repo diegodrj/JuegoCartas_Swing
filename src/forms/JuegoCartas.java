@@ -22,6 +22,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import modelo.FondoPanel;
+import modelo.LeerProperties;
 
 /**
  *
@@ -37,6 +38,7 @@ public class JuegoCartas extends javax.swing.JDialog {
         setContentPane(new FondoPanel("/imagenes/fondo.jpg"));//Insertar fondo panel
         initComponents();
 
+        cargarRutas();
         iniciarTodo();
     }
 
@@ -351,7 +353,6 @@ public class JuegoCartas extends javax.swing.JDialog {
         cartasAux = new ArrayList<>();
         pausa = false;
         
-        cargarRutas();
         cargarRutasEnJLabels();
         empezarTimer();
     }
@@ -469,11 +470,12 @@ public class JuegoCartas extends javax.swing.JDialog {
     }
 
     private void cargarRutas() {
+        LeerProperties prop = new LeerProperties();
         imagenes = new ArrayList<>();
-        imagenes.add("/imagenes/homer1.jpg");
-        imagenes.add("/imagenes/homer2.jpg");
-        imagenes.add("/imagenes/homer3.jpg");
-        imagenes.add("/imagenes/homer4.jpg");
+        imagenes.add(prop.getProperty().getProperty("imagen1"));
+        imagenes.add(prop.getProperty().getProperty("imagen2"));
+        imagenes.add(prop.getProperty().getProperty("imagen3"));
+        imagenes.add(prop.getProperty().getProperty("imagen4"));
     }
 
     private void cargarRutasEnJLabels() {
