@@ -5,7 +5,7 @@
  */
 package forms;
 
-import modelo.FondoPanel;
+import persistencia.FondoPanel;
 
 /**
  *

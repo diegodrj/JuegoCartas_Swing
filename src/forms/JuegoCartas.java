@@ -22,8 +22,8 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import modelo.FondoPanel;
-import modelo.LeerProperties;
+import persistencia.FondoPanel;
+import persistencia.LeerProperties;
 
 /**
  *
