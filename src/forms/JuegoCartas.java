@@ -21,6 +21,7 @@ import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import modelo.FondoPanel;
 import modelo.LeerProperties;
 
@@ -388,6 +389,7 @@ public class JuegoCartas extends javax.swing.JDialog {
         cartasAux.clear();
         if (todasLevantadas()) {
             timer.cancel();
+            JOptionPane.showMessageDialog(this, "¡¡HAS GANADO!!\nDale a reiniciar para jugar de nuevo");
         }
     }
 
